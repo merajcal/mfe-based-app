@@ -1,0 +1,21 @@
+[
+  {
+    "mfe": "timer-widget",
+    "host": "https://ciscodevnet.github.io/webex-contact-center-widget-starter/widgets/timer.js",
+    "x": 0,
+    "y": 0,
+    "w": 2,
+    "h": 1
+  },
+  {
+    "mfe": "rss-feed-widget",
+    "host": "https://ciscodevnet.github.io/webex-contact-center-widget-starter/widgets/rss-feed-widget.js",
+    "properties": {
+      "rss-feed": "https://w1.weather.gov/xml/current_obs/PHNL.rss"
+    },
+    "x": 2,
+    "y": 0,
+    "w": 2,
+    "h": 1
+  }
+]
