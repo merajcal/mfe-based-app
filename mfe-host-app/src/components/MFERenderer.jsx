@@ -73,7 +73,7 @@ const ReactGridLayout = () => {
                 isResizable: true,
               }}
             >
-              <div>
+              <div style={{ height: "100%", overflow: "auto" }}>
                 <MFELoader
                   widgetConfig={{
                     host: widget.host,
