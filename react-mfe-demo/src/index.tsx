@@ -44,7 +44,7 @@ const wcChecklistShadow = reactToWebComponent(
   { dashStyleAttributes: true, shadow: true }
 );
 
-customElements.define("r2wc-checklist", wcChecklist);
+customElements.define("react-mfe-demo", wcChecklist);
 customElements.define("r2wc-checklist-shadow", wcChecklistShadow);
 
 // How to use:

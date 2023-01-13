@@ -1,4 +1,4 @@
-import { Box, Button, TextField } from "@mui/material";
+import { Box, Button, TextField, Input } from "@mui/material";
 import { useState } from "react";
 import { ChecklistItemType } from "../../types/checklistItem";
 import ChecklistItem from "../checklistitem/ChecklistItem";
@@ -20,10 +20,10 @@ export default function Checklist(props: Props) {
     <Box sx={{ margin: "10px" }}>
       <Box display="flex" gap="1rem">
         <TextField
-          label="Add checklist item"
+          variant="standard"
+          placeholder="Enter checklist item"
           value={newItem}
           onChange={(e) => setNewItem(e.currentTarget.value)}
-          variant="outlined"
           size="small"
           error={!newItem}
         />

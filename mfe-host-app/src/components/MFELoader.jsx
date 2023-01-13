@@ -17,7 +17,11 @@ function MFELoader(props) {
     });
   }, [host, mfe]);
   if (loaded) {
-    return React.createElement(mfe, { ...properties });
+    return React.createElement(
+      "mfe-container",
+      null,
+      React.createElement(mfe, { slot: "mfe", ...properties })
+    );
   } else {
     if (loadError && loadError.type === "error") {
       return React.createElement(
@@ -55,3 +59,18 @@ const loadMFEScript = (host, mfe, callback) => {
 };
 
 export default MFELoader;
+
+customElements.define(
+  "mfe-container",
+  class extends HTMLElement {
+    connectedCallback() {
+      this.attachShadow({ mode: "open" });
+      this.shadowRoot.innerHTML = `
+      <div>
+        <slot name="mfe"></slot>
+      </div>
+    
+    `;
+    }
+  }
+);

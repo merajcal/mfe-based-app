@@ -9,7 +9,7 @@
     "h": 3
   },
   {
-    "mfe": "r2wc-checklist",
+    "mfe": "react-mfe-demo",
     "host": "http://localhost:3002/static/js/bundle.js",
     "properties": [{ "label": "First Thing", "isChecked": false }],
     "x": 3,
