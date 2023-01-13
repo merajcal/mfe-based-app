@@ -1,28 +1,18 @@
 [
   {
-    "mfe": "timer-widget",
-    "host": "https://ciscodevnet.github.io/webex-contact-center-widget-starter/widgets/timer.js",
-    "x": 0,
-    "y": 0,
-    "w": 2,
-    "h": 1
-  },
-  {
-    "mfe": "rss-feed-widget",
-    "host": "https://ciscodevnet.github.io/webex-contact-center-widget-starter/widgets/rss-feed-widget.js",
-    "properties": {
-      "rss-feed": "https://w1.weather.gov/xml/current_obs/PHNL.rss"
-    },
-    "x": 2,
-    "y": 0,
-    "w": 2,
-    "h": 1
-  },
-  {
     "mfe": "employee-card",
     "host": "http://localhost:3001/employee-card.js",
     "properties": { "name": "Md Meraj", "avatar": "https://picsum.photos/200" },
-    "x": 4,
+    "x": 0,
+    "y": 0,
+    "w": 3,
+    "h": 3
+  },
+  {
+    "mfe": "r2wc-checklist",
+    "host": "http://localhost:3002/static/js/bundle.js",
+    "properties": [{ "label": "First Thing", "isChecked": false }],
+    "x": 3,
     "y": 0,
     "w": 3,
     "h": 3

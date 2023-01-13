@@ -1,6 +1,28 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an example of Micro Frontend Architecture and how to integrate micro frontends at runtime. I have used React.js for the shell app (container). I set up two sample micro frontend projects, one in VanillaJS and another in React. For the React MFE, I used the react-to-webcomponent library to convert the React component into a web component. One can use any UI technology to build the shell app and micro frontend app.
+
+I also used the React Grid Layout for laying out the MFE in the UI. You can learn more about the React Grid Layout here: https://www.npmjs.com/package/react-grid-layout
+
+To configure your micro frontend, please add your MFE configuration inside src/widget-config.json
+
+Example:
+
+````js
+{
+    "mfe": "<< name of the micro frontend/web component >>"
+    "host": "url of the hosted micro frontend bundle",
+    "properties": "if your micro frontend expects any attributes/properties",
+    "x": 4, // this for react grid layout x coordinate of your widget
+    "y": 0, // this for react grid layout y coordinate of your widget
+    "w": 3, // this for react grid layout width of the widget
+    "h": 3 // this for react grid layout height of the widget
+}```
+
+## Locally hosted MFE integration
+
+if you want to integrate these tow sample MFEs , you can start the local server of each MFE (i.e. npm run start or yarn start). and then start the server of shel/container app (mfe-host-app).
+please update the host name (i.e. url) of the locally hosted mfe inside src/widget-config.json
 
 ## Available Scripts
 
@@ -29,18 +51,5 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+````
