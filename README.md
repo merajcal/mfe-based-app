@@ -5,5 +5,6 @@ This micro frontend also demonstrate how we can integrate technology agnostics m
 
 # How to Run Demo App
 - Make sure you have yarn package manager installed
-- Run `learn bootstrap` on the root directory to install packages 
+- Make sure you have lerna cli installed
+- Run `lerna bootstrap` on the root directory to install packages 
 - Run `yarn start` to see the application up and running
